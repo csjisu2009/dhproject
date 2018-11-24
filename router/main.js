@@ -2,7 +2,7 @@ module.exports =  function(app, fs)
 {
    app.get('/',function(req,res){
       res.render('index', {
-          title: "dhProject",
+          title: "MY HOMEPAGE",
           length: 5
       })
    });
