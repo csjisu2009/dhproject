@@ -7,6 +7,7 @@ module.exports =  function(app, fs)
       })
    });
 
+
    app.get('/list', function (req, res) {
       fs.readFile( __dirname + "/../data/" + "user.json", 'utf8', function (err, data) {
          console.log( data );
