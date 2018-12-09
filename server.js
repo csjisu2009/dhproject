@@ -25,7 +25,7 @@ app.use(session({
 
 
 var router = require('./router/main')(app, fs);//add fs as parameter in order to use fs module in router
-
+/*
 var mysql = require('mysql');
 var connection = mysql.createConnection({
     host : 'localhost',
@@ -38,3 +38,4 @@ var connection = mysql.createConnection({
 connection.connect();
 connection.query('select * from t_pj_standard;' );
 connection.end();
+*/

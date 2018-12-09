@@ -9,6 +9,7 @@ module.exports =  function(app, fs)
    });
 
    app.get('/index2',function(req,res){
+      //Mega TB 영역별 상세
       res.render('index2', {
           title: "MY HOMEPAGE_tosil",
           length: 5
