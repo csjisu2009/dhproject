@@ -6,6 +6,7 @@ module.exports =  function(app, fs)
           length: 5
       })
    });
+<<<<<<< HEAD
 
    app.get('/index2',function(req,res){
       res.render('index2', {
@@ -14,6 +15,9 @@ module.exports =  function(app, fs)
       })
    });
 
+=======
+``
+>>>>>>> bb1986d2c68fac88d552e71ad1bc47e588a67a8b
    app.get('/list', function (req, res) {
       fs.readFile( __dirname + "/../data/" + "user.json", 'utf8', function (err, data) {
          console.log( data );
