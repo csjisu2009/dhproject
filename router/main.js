@@ -7,6 +7,13 @@ module.exports =  function(app, fs)
       })
    });
 
+   app.get('/index2',function(req,res){
+      res.render('index2', {
+          title: "MY HOMEPAGE_tosil",
+          length: 5
+      })
+   });
+
    app.get('/list', function (req, res) {
       fs.readFile( __dirname + "/../data/" + "user.json", 'utf8', function (err, data) {
          console.log( data );
@@ -21,6 +28,7 @@ module.exports =  function(app, fs)
 
       });
    });
+
 
 
 }
