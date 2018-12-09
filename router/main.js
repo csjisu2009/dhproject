@@ -1,5 +1,6 @@
 module.exports =  function(app, fs)
 {
+   
    app.get('/',function(req,res){
       //투입계획 OL보고용
       res.render('index', {
@@ -7,6 +8,7 @@ module.exports =  function(app, fs)
           length: 5
       })
    });
+
 
    app.get('/index2',function(req,res){
       res.render('index2', {
@@ -29,7 +31,14 @@ module.exports =  function(app, fs)
 
       });
    });
-
-
-
+   
+   var mysql = require('mysql');
+   var connection = mysql.createConnection({
+       host : '10.32.145.215',
+       user : 'root',
+       password : 'anjun9988',
+       port : '3306',
+       database : 'tosil'
+   });
+    
 }
