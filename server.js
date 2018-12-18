@@ -25,17 +25,8 @@ app.use(session({
 
 
 var router = require('./router/main')(app, fs);//add fs as parameter in order to use fs module in router
-/*
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : 'anjun9988',
-    port : 3306,
-    database : 'tosil'
-});
 
-connection.connect();
-connection.query('select * from t_pj_standard;' );
-connection.end();
-*/
+var showAllDataRouter = require('./router/show-all-data'); //db select 실험_jy
+app.use('/show-all-data', showAllDataRouter); //db select 실험_jy
+
+

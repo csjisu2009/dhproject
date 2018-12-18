@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include ./header.ejs %>
+
+  <script>
+  var year = 
+  </script>
+  <body id="page-top">
+
+<div id="content-wrapper">
+        <div class="container-fluid">
+            <div class="card mb-3">
+                <div class="card-header" style="font-weight:bold">
+                    인원 정보
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+
+                            <form id="basicForm">
+                                    <table summary="">
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col width="100px" />
+                                            <col width="*%" />
+                                            <col width="150px" />
+                                            <col width="*px" />
+                                            <col width="180px" />
+                                            <col width="*%" />
+                                            <col width="150px" />
+                                            <col width="*%" />
+                                            <col width="150px" />
+                                            <col width="*%" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="required">*</span>성명</th>
+                                                <td>
+                                                        <input  name="IN_IMPDEVTASK.TASK_CD" id="IN_IMPDEVTASK.TASK_CD">
+                                                </td>
+                                                <th><span class="required">  *</span>CNS/협력사</th>
+                                                <td >
+                                                     <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                <option value="Y">LG CNS</option><option value="N">협력사</option>
+                                                    </select>
+                                                </td>
+                                                <th><span class="required">  *</span>소속부서/협력사명</th>
+                                                    <td>
+                                                            <input  name="IN_IMPDEVTASK.TASK_CD" id="IN_IMPDEVTASK.TASK_CD">
+                                                    </td>
+                                                <th><span class="required">  *</span>투입 사업팀</th>
+                                                    <td>
+                                                        <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                    <option value="Y">Y</option><option value="N">N</option>
+                                                        </select>
+                                                    </td>
+                                                <th><span class="required">  *</span>등급</th>
+                                                    <td>
+                                                        <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                    <option value="Y">Y</option><option value="N">N</option>
+                                                        </select>
+                                                    </td>
+                                            </tr>
+        
+                                        </tbody>
+                                   </table>
+                                    <input type="hidden" name="IN_IMPDEVTASK.DEV_BACKGROUND" id="IN_IMPDEVTASK.DEV_BACKGROUND" />
+                                </form>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="container-fluid">
+            <div class="card mb-3">
+                    <div class="card-header" style="font-weight:bold">
+                        투입정보
+                    </div>
+                    <div class="card-body">
+                            <table class="table table-bordered" id="dataTable1"  cellspacing="0">
+                                    <colgroup>
+                                        <col width="8%">
+                                        <col width="8%">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                 </colgroup>
+                             <tbody>
+                                    <tr>
+                                        <th colspan="2">구분</th>
+                                        <th>계</th>
+                                        <th id="th1" >1월</th>
+                                        <th id="th2">2월</th>
+                                        <th id="th3">3월</th>
+                                        <th id="th4">4월</th>
+                                        <th id="th5">5월</th>
+                                        <th id="th6">6월</th>
+                                        <th id="th7">7월</th>
+                                        <th id="th8">8월</th>
+                                        <th id="th9">9월</th>
+                                        <th id="th10">10월</th>
+                                        <th id="th11">11월</th>
+                                        <th id="th12">12월</th>
+                                  </tr>
+                                  <tr>
+                                      <th rowspan="3">투입계획M/M</th>
+                                      <td><span id ="TARGET_YEAR1"></span></td>
+                                <td><div id="TARGET_YEAR_QTY1"></div></td>
+                                 <td><div id="M1_QTY"></div></td>
+                                 <td><div id="M2_QTY"></div></td>
+                                 <td><div id="M3_QTY"></div></td>
+                                 <td><div id="M4_QTY"></div></td>
+                                 <td><div id="M5_QTY"></div></td>
+                                 <td><div id="M6_QTY"></div></td>
+                                 <td><div id="M7_QTY"></div></td>
+                                 <td><div id="M8_QTY"></div></td>
+                                 <td><div id="M9_QTY"></div></td>
+                                 <td><div id="M10_QTY"></div></td>
+                                 <td><div id="M11_QTY"></div></td>
+                                 <td><div id="M12_QTY"></div></td>
+                             </tr>
+                             <tr>
+                               <td><span id ="TARGET_YEAR2"></span></td>
+                               <td><div id="TARGET_YEAR_QTY2"></div></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><span id ="TARGET_YEAR3"></span></td>
+                               <td><div id="TARGET_YEAR_QTY3"></div></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                             </tr>              
+                       </tbody>
+                      </table>
+                    </div>
+
+                    <div class="card-body">
+                            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                                    <colgroup>
+                                        <col width="8%">
+                                        <col width="8%">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                        <col width="">
+                                 </colgroup>
+                             <tbody>
+                                    <tr>
+                                        <th colspan="2">구분</th>
+                                        <th>계</th>
+                                        <th id="th1">1월</th>
+                                        <th id="th2">2월</th>
+                                        <th id="th3">3월</th>
+                                        <th id="th4">4월</th>
+                                        <th id="th5">5월</th>
+                                        <th id="th6">6월</th>
+                                        <th id="th7">7월</th>
+                                        <th id="th8">8월</th>
+                                        <th id="th9">9월</th>
+                                        <th id="th10">10월</th>
+                                        <th id="th11">11월</th>
+                                        <th id="th12">12월</th>
+                                  </tr>
+                                  <tr>
+                                      <th rowspan="3">실제투입M/M</th>
+                                      <td><span id ="TARGET_YEAR1"></span></td>
+                                      <td><div id="TARGET_YEAR_QTY1"></div></td>
+                                 <td><div id="M1_QTY"></div></td>
+                                 <td><div id="M2_QTY"></div></td>
+                                 <td><div id="M3_QTY"></div></td>
+                                 <td><div id="M4_QTY"></div></td>
+                                 <td><div id="M5_QTY"></div></td>
+                                 <td><div id="M6_QTY"></div></td>
+                                 <td><div id="M7_QTY"></div></td>
+                                 <td><div id="M8_QTY"></div></td>
+                                 <td><div id="M9_QTY"></div></td>
+                                 <td><div id="M10_QTY"></div></td>
+                                 <td><div id="M11_QTY"></div></td>
+                                 <td><div id="M12_QTY"></div></td>
+                             </tr>
+                             <tr>
+                               <td><span id ="TARGET_YEAR2"></span></td>
+                               <td><div id="TARGET_YEAR_QTY2"></div></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><span id ="TARGET_YEAR3"></span></td>
+                               <td><div id="TARGET_YEAR_QTY3"></div></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                             </tr>              
+                       </tbody>
+                      </table>
+                    </div>
+
+
+
+
+                    </div>
+       </div>
+       <a class="btn btn-default" id = "btnadelete" href="#" onclick = "btnDelete()">저장</a>
+    </div>
+</body>
+
+</html>

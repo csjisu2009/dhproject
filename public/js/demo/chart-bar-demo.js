@@ -7,13 +7,23 @@ var ctx = document.getElementById("myBarChart");
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["인프라", "MES", "WMS", "QMS", "ERP", "DW"],
+    labels: ["인프라", "MES", "WMS", "QMS", "ERP", "DW","합계"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "rgba(2,117,216,1)",
-      borderColor: "rgba(2,117,216,1)",
-      data: [10, 20, 30, 40, 40, 50],
-    }],
+      data: [1, 15, 4, 6, 0, 10, 36],
+      backgroundColor: 'rgba(54, 162, 235, 1)'
+    },
+    {
+      data: [2, 19, 9, 3, 1, 2, 36],
+      backgroundColor: 'rgba(255, 206, 86, 1)'
+    },
+    {
+      data: [0, 0, 0, 13, 2, 2, 17],
+      backgroundColor: 'rgba(75, 192, 192, 1)'
+    },
+    {
+      data: [0, 1, 1, 0, 0, 0, 2],
+      backgroundColor: 'rgba(153, 102, 255, 1)'
+    }]
   },
   options: {
     scales: {

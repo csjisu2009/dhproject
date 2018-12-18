@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include ./header.ejs %>
+
+  <script>
+        function btnAdd(){
+            var popup =  window.open("/input1","");
+            popup.moveTo(0,0);
+        }
+  </script>
+
+  <body id="page-top">
+    <% include ./top_menu.ejs %>
+    <% include ./side_menu.ejs %>
+    <div id="content-wrapper">
+        <div class="container-fluid">
+            <div class="card mb-3">
+                <div class="card-header" style="font-weight:bold">
+                   STEP1 : 프로젝트
+                   <a class="btn btn-default" id = "btnsave" href="#" style="float:right" onclick = "btnSave()">저장</a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+
+                            <form id="basicForm">
+                                    <table summary="">
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col width="150px" />
+                                            <col width="*%" />
+                                            <col width="150px" />
+                                            <col width="*px" />
+                                            <col width="150px" />
+                                            <col width="*%" />
+                                            <col width="150px" />
+                                            <col width="*%" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="required">*</span>투입 프로젝트명</th>
+                                                <td>
+                                                        <input class="form-control"  name="IN_IMPDEVTASK.TASK_CD" id="IN_IMPDEVTASK.TASK_CD" >
+                                                </td>
+                                                <th><span class="required">  *</span>본부/부문</th>
+                                                <td >
+                                                     <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                <option value="Y">Y</option><option value="N">N</option>
+                                                    </select>
+                                                </td>
+                                                <th><span class="required">  *</span>Mega 여부 (Y/N)</th>
+                                                    <td>
+                                                         <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                    <option value="Y">Y</option><option value="N">N</option>
+                                                        </select>
+                                                    </td>
+                                                <th><span class="required">  *</span>Domain</th>
+                                                    <td>
+                                                        <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                    <option value="Y">Y</option><option value="N">N</option>
+                                                        </select>
+                                                    </td>
+                                            </tr>
+                
+                                            <tr>
+                                               <th><span class="required">*</span>업무구분</th>
+                                                    <td>
+                                                        <select class="custom-select custom-select-sm form-control form-control-sm" style="width:180px;font-weight:bold">
+                                                                    <option value="Y">Y</option><option value="N">N</option>
+                                                        </select>
+                                                    </td>
+                                                    <th><span class="required">  *</span>역할</th>
+                                                    <td>
+                                                        <input class="form-control" name="IN_IMPDEVTASK.TASK_CD" id="IN_IMPDEVTASK.TASK_CD"  style="width:180px">
+                                                    </td>
+                                                    <th><span class="required">  *</span>상세업무</th>
+                                                    <td>
+                                                        <input class="form-control"  name="IN_IMPDEVTASK.TASK_CD" id="IN_IMPDEVTASK.TASK_CD"  style="width:180px">
+                                                    </td>
+                                                    <th><span class="required">  *</span>관리담당자</th>
+                                                    <td>
+                                                        <input  class="form-control" name="IN_IMPDEVTASK.TASK_CD" id="IN_IMPDEVTASK.TASK_CD"  style="width:180px">
+                                                    </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <input type="hidden" name="IN_IMPDEVTASK.DEV_BACKGROUND" id="IN_IMPDEVTASK.DEV_BACKGROUND" />
+                                </form>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="container-fluid">
+            <div class="card mb-3">
+                    <div class="card-header" style="font-weight:bold">
+                        STEP2 : 투입인원
+                        <a class="btn btn-default" id = "btnadd" href="#" style="float:right" onclick = "btnAdd()">인원 추가</a>
+                        <a class="btn btn-default" id = "btnadelete" href="#" style="float:right" onclick = "btnDelete()">인원 삭제</a>
+                    </div>
+                    <div class="card-body">
+                            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                                <thead>
+                                      <tr>
+                                        <th><input name="select_all" value="1" type="checkbox"></th>
+                                        <th>성명</th>
+                                        <th>소속부서/협력사명</th>
+                                        <th>투입 사업팀</th>
+                                        <th>등급</th>
+                                        <th>직급</th>
+                                        <th>투입정보</th>
+                                      </tr>
+                                </thead>
+                                <tbody>
+                                        <tr></tr>
+                                 </tbody>
+                            </table>
+                    </div>
+                    </div>
+       </div>
+    
+    </div>
+    
+            <!-- /.container-fluid -->
+    <% include ./footer.ejs %>
+  </body>
+
+</html>
