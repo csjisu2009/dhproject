@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" charset="utf-8" />
+<% include ./header.ejs %>
+
+  <body id="page-top">
+    <% include ./top_menu.ejs %>
+    <% include ./side_menu.ejs %>
+      <div id="content-wrapper">
+        <div class="container-fluid">
+
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              전체 프로젝트 조회</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>CNS/협력사</th>
+                      <th>소속부서/협력사명</th>
+                      <th>투입 사업팀</th>
+                      <th>등급</th>
+                      <th>성명</th>
+                      <th>직급</th>
+                      <th>역할</th>
+                      <th>상세업무</th>
+                      <th>관리담당자</th>
+                      <th>투입계획일자</th>
+                      <th>실제투입일자</th>
+                      <th>철수일자</th>
+                      <th>잔여기간</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                        <th>CNS/협력사</th>
+                        <th>소속부서/협력사명</th>
+                        <th>투입 사업팀</th>
+                        <th>등급</th>
+                        <th>성명</th>
+                        <th>직급</th>
+                        <th>역할</th>
+                        <th>상세업무</th>
+                        <th>관리담당자</th>
+                        <th>투입계획일자</th>
+                        <th>실제투입일자</th>
+                        <th>철수일자</th>
+                        <th>잔여기간</th>
+                        <th>Status</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                        <% for(var i = 0; i< project.length; i++){%> 
+                           <tr>
+                            <td><%=project[i].sosoksa %> </td>
+                            <td><%=project[i].team %> </td>
+                            <td><%=project[i].input_saupteam %> </td>
+                            <td><%=project[i].dungup %> </td>
+                            <td><%=project[i].name %> </td>
+                            <td><%=project[i].role %> </td>
+                            <td><%=project[i].detail_task %> </td>
+                            <td><%=project[i].supervisor %> </td>
+                            <td><%=project[i].in_plan_date %> </td>
+                            <td><%=project[i].real_input_date %> </td>
+                            <td><%=project[i].out_date %> </td>
+                            <td>잔여기간</td>
+                            <td>상태</td>
+                            </tr>
+                          <% }; %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+        <% include ./footer.ejs %>
+
+  </body>
+
+</html>
+

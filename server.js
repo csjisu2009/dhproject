@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');//express-session access cookie directly, cookie-parser is useless
 var fs = require("fs")//use fs module in order to open files
 
+
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -25,8 +27,3 @@ app.use(session({
 
 
 var router = require('./router/main')(app, fs);//add fs as parameter in order to use fs module in router
-
-var showAllDataRouter = require('./router/show-all-data'); //db select 실험_jy
-app.use('/show-all-data', showAllDataRouter); //db select 실험_jy
-
-

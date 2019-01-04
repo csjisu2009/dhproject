@@ -5,7 +5,127 @@
   <body id="page-top">
     <% include ./top_menu.ejs %>
     <% include ./side_menu.ejs %>
-    <% include ./detail2.ejs %>
+   
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active">기초소재 Mega TB 영역별 상세</li>
+          </ol>
+
+          <!-- Area Chart Example-->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <i class="fas fa-chart-bar"></i>
+                  기초소재 MEGA TB 영역별 상세(차트)</div>
+                <div class="card-body">
+                  <canvas id="myBarChart" width="100%" height="50"></canvas>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-lg-6">
+            <div class="card mb-3">
+                <div class="card-header" style="font-weight:bold">
+                  기초소재 MEGA TB 영역별 상세(표)
+                  <a class="btn btn-primary" href="#" style="float:right">조회</a>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>인프라</th>
+                          <th>MES</th>
+                          <th>WMS</th>
+                          <th>QMS</th>
+                          <th>ERP</th>
+                          <th>DW</th>
+                          <th>합계</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <th>
+                                <select class="custom-select custom-select-sm form-control form-control-sm" style="width:90px;font-weight:bold">
+                                    <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9" >9</option><option value="10">10</option>
+                                    <option value="11" selected="selected">11</option><option value="12">12</option></select>월 </th>
+                          <td>1</td>
+                          <td>15</td>
+                          <td>4</td>
+                          <td>6</td>
+                          <td>0</td>
+                          <td>10</td>
+                          <td>36</td>
+
+                        </tr>
+                        <tr>
+                            <th>
+                                <select class="custom-select custom-select-sm form-control form-control-sm" style="width:90px;font-weight:bold">
+                                    <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                                    <option value="11" >11</option><option value="12" selected="selected">12</option></select>월 </th>
+                          <td>2</td>
+                          <td>19</td>
+                          <td>9</td>
+                          <td>3</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>36</td>
+                          </tr>
+                        <tr>
+                            <th>
+                                <select class="custom-select custom-select-sm form-control form-control-sm" style="width:90px;font-weight:bold">
+                                    <option value="1" selected="selected">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9" >9</option><option value="10">10</option>
+                                    <option value="11">11</option><option value="12">12</option></select>월 </th>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>13</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>17</td>
+                         </tr>
+
+                         <tr>
+                            <th>
+                                <select class="custom-select custom-select-sm form-control form-control-sm" style="width:90px;font-weight:bold">
+                                    <option value="1" >1</option><option value="2"selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                                    <option value="11">11</option><option value="12">12</option></select>월 </th>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                         </tr>
+    
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+         </div>
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
 
         <!-- Sticky Footer -->
         <footer class="sticky-footer">

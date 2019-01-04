@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" charset="utf-8" />
+<% include ./header.ejs %>
+<script>
+  function info_detail(){
+    alert(project[i].pj_name);
+  }
+</script>
+
+  <body id="page-top">
+    <% include ./top_menu.ejs %>
+    <% include ./side_menu.ejs %>
+      <div id="content-wrapper">
+        <div class="container-fluid">
+
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              전체 프로젝트 조회</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>투입 프로젝트명</th>
+                      <th>본부/부문</th>
+                      <th>Mega 여부 (Y/N)</th>
+                      <th>Domain</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                       <th>투입 프로젝트명</th>
+                        <th>본부/부문</th>
+                        <th>Mega 여부 (Y/N)</th>
+                        <th>Domain</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                        <% for(var i = 0; i< project.length; i++){%> 
+                           <tr>
+                            <td><a href="/info_detail?id=<%=project[i].pj_name %>" </a> <%=project[i].pj_name %> </td>
+                            <td><%=project[i].bumun_name %> </td>
+                            <td><%=project[i].megaC %> </td>
+                            <td><%=project[i].domain_name %> </td>
+                            </tr>
+                          <% }; %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+        <% include ./footer.ejs %>
+
+  </body>
+
+</html>
+

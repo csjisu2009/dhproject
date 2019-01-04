@@ -5,7 +5,225 @@
   <body id="page-top">
     <% include ./top_menu.ejs %>
     <% include ./side_menu.ejs %>
-    <% include ./detail1.ejs %>
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- DataTables Example -->
+          <div class="card mb-3">
+            <div class="card-header" style="font-weight:bold">
+              투입계획 OL보고용
+              <a class="btn btn-primary" href="#" style="float:right">조회</a>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <th>투입인원</th>
+                      <th></th>
+                      <th></th>
+                      <th colspan = "8">2018년 계획</th>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th>10월 철수</th>
+                      <th>11월 투입</th>
+                      <th>9월</th>
+                      <th>9월 TBD</th>
+                      <th>10월</th>
+                      <th>10월 TBD</th>
+                      <th>11월</th>
+                      <th>11월 TBD</th>
+                      <th>12월</th>
+                      <th>12월 TBD</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <% for(var i = 0; i< project[0].length; i++){%> 
+                         <tr>
+                          <td><%=project[0][i].c_bumun_name %> </td>
+                          <td>0 </td>
+                          <td>0 </td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          </tr>
+                        <% }; %>
+                        <tr>
+                            <td>Total </td>
+                            <td>0 </td>
+                            <td>0 </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                         </tr>
+                         <tr>
+                            <td>N </td>
+                            <td>0 </td>
+                            <td>0 </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                         </tr>
+                         <tr>
+                            <td>PI,SI,PMO,이행 </td>
+                            <td>0 </td>
+                            <td>0 </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                         </tr>
+                         <tr>
+                            <td>SM </td>
+                            <td>0 </td>
+                            <td>0 </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                         </tr>
+                         <tr>
+                            <td>기타(BD,BE,팀장) </td>
+                            <td>0 </td>
+                            <td>0 </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                         </tr>
+                         <tr>
+                            <td>Y </td>
+                            <td>0 </td>
+                            <td>0 </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                         </tr>
+                         <tr>
+                          <td colspan = "16">Mega(Y)본부/부문별</td> 
+                         </tr>
+                         <% for(var i = 0; i< project[2].length; i++){%> 
+                          <tr>
+                           <td><%=project[2][i].bumun_name %> </td>
+                           <td>0 </td>
+                           <td>0 </td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           </tr>
+                         <% }; %>
+                         <td colspan = "16">Mega(Y)영역별</td> 
+                        </tr>
+                        <% for(var i = 0; i< project[1].length; i++){%> 
+                         <tr>
+                          <td><%=project[1][i].domain_name %> </td>
+                          <td>0 </td>
+                          <td>0 </td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          </tr>
+                        <% }; %>
+                        
+                </tbody>
+  
+                </table>
+              </div>
+
+
+            </div>
+        </div>
     <% include ./footer.ejs %>
   </body>
 
